@@ -1,11 +1,18 @@
 <!-- wp:html -->
 <script src="https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo/lightning/lightning.out.js"></script>
 <script>
+    // Define las variables dinámicas para los parámetros
+    var recordId = "02iDy0000093i95IAA";
+    var token = "f9d25z/9jesbXErtNdwsLGqzzqg68L6wrY0kOLaAwFf0HeH6Jzy1m18QgpEZ9MhFzpV/33vW36ZC2jZj2svDzw==";
+
     $Lightning.use("c:auraApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
             $Lightning.createComponent(
                 "c:auraComp", // top-level component of your app
-                { },                  // attributes to set on the component when created
+                {
+                    "recordId": recordId,
+                    "token": token
+                },                  // attributes to set on the component when created
                 "lightningLocator",   // the DOM location to insert the component
                 function(cmp) {
                     console.log('Hi from callback');// callback when component is created and active on the page
