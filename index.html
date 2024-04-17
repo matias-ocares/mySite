@@ -1,0 +1,23 @@
+<!-- wp:html -->
+<script src="https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo/lightning/lightning.out.js"></script>
+<script>
+    $Lightning.use("c:auraApp",    // name of the Lightning app
+        function() {                  // Callback once framework and app loaded
+            $Lightning.createComponent(
+                "c:auraComp", // top-level component of your app
+                { },                  // attributes to set on the component when created
+                "lightningLocator",   // the DOM location to insert the component
+                function(cmp) {
+                    console.log('Hi from callback');// callback when component is created and active on the page
+                }
+            );
+        }, 'https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo'  // Community endpoint
+    );
+</script>
+<!-- /wp:html -->
+
+<!-- wp:paragraph -->
+<div id="lightningLocator">
+<p>Something</p>
+</div>
+<!-- /wp:paragraph -->
