@@ -20,6 +20,10 @@
             );
         }, 'https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo'  // Community endpoint
     );
+     window.addEventListener('flowFinished', function(event) {
+            console.log('Flow finished with result:', event.detail.result);
+            // Aquí puedes agregar la lógica para manejar el evento
+        });
 </script>
 <!-- /wp:html -->
 
