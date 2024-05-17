@@ -11,7 +11,11 @@
                 "c:auraComp", // top-level component of your app
                 {
                     "recordId": recordId,
-                    "token": token
+                    "token": token,
+                     "onClose": ()=>{
+                                    if(callbackPopup){
+                                      callbackPopup()
+                                    }
                 },                  // attributes to set on the component when created
                 "lightningLocator",   // the DOM location to insert the component
                 function(cmp) {
