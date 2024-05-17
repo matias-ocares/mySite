@@ -20,9 +20,10 @@
             );
         }, 'https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo'  // Community endpoint
     );
-    // Listen for messages from the Aura component
+   // Listen for messages from the Aura component
     window.addEventListener('message', function(event) {
-        if (event.data.status === 'FINISHED') {
+        // Check if the received event name is the one you specified
+        if (event.data.event === 'lightningtOutMessage' && event.data.status === 'FINISHED') {
             console.log('Flow finished with result:', event.data.result);
             alert('Flow finished with result: ' + event.data.result);
         }
