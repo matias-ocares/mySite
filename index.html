@@ -3,15 +3,13 @@
 <script>
     // Define the dynamic variables for the parameters.
     var recordId = "02iDy0000093kKFIAY";
-    var token = "f9d25z/9jesbXErtNdwsLGqzzqg68L6wrY0kOLaAwFf0HeH6Jzy1m18QgpEZ9MhFzpV/33vW36ZC2jZj2svDzw==";
 
-    $Lightning.use("c:auraApp",    // name of the Lightning app
+    $Lightning.use("c:EZPayOptApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
             $Lightning.createComponent(
                 "c:auraComp", // top-level component of your app
                 {
                     "recordId": recordId,
-                    "token": token,
                      "onClose": ()=>{
                                     if(callbackPopup){
                                       callbackPopup()
