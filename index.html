@@ -10,19 +10,21 @@
                 "c:auraComp", // top-level component of your app
                 {
                     "recordId": recordId,
-                     "onClose": ()=>{
-                                    if(callbackPopup){
-                                      callbackPopup()
-                                    }
+                    "onClose": function() {
+                        if (callbackPopup) {
+                            callbackPopup();
+                        }
+                    }
                 },                  // attributes to set on the component when created
                 "lightningLocator",   // the DOM location to insert the component
                 function(cmp) {
-                    console.log('Hi from callback');// callback when component is created and active on the page
+                    console.log('Hi from callback'); // callback when component is created and active on the page
                 }
             );
         }, 'https://floridafarmbureau--cetrixdev.sandbox.my.site.com/Demo'  // Community endpoint
     );
-   // Listen for messages from the Aura component
+
+    // Listen for messages from the Aura component
     window.addEventListener('message', function(event) {
         // Check if the received event name is the one you specified
         if (event.data.event === 'lightningtOutMessage' && event.data.status === 'FINISHED') {
@@ -30,11 +32,9 @@
             alert('Flow finished with result: ' + event.data.result);
         }
     }, false);
-  
 </script>
 <!-- /wp:html -->
 
 <!-- wp:paragraph -->
-<div id="lightningLocator">
-</div>
+<div id="lightningLocator"></div>
 <!-- /wp:paragraph -->
