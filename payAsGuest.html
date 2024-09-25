@@ -5,10 +5,10 @@
     var recordId = "02iOx000000wQyDIAU";
     var token = "51a6ZCOR+U37hTrcuuMQVnbsyc9uHPNBXVNXRWX+gJvQ3O73wmxuAGCXFKyQsO7bDrjhsNAdngVhBHF/K8ruFw==";
 
-    $Lightning.use("c:auraApp",    // name of the Lightning app
+    $Lightning.use("c:PayAsGuestApp",    // name of the Lightning app
         function() {                  // Callback once framework and app loaded
             $Lightning.createComponent(
-                "c:auraComp", // top-level component of your app
+                "c:PayAsGuestCmp", // top-level component of your app
                 {
                     "recordId": recordId,
                     "token": token,
